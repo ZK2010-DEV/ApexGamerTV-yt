@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+<link rel="icon" href="Favicon.png" type="image/x-icon" />
+  <title>ApexGamerTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: radial-gradient(circle at top left, #0f0f0f, #090909);
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(145deg, #1f1f1f, #0a0a0a);
+      padding: 30px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+      border-bottom: 2px solid #3af;
+      box-shadow: 0 0 20px #3af;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #3af;
+      text-shadow: 0 0 20px #3af;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #111;
+      padding: 15px 0;
+      animation: fadeIn 1.5s ease-in;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #3af;
+      text-shadow: 0 0 10px #3af;
+    }
+    .hero {
+      background-image: url('https://cdn.wallpapersafari.com/67/4/IZqD7B.gif');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border: 2px solid #3af;
+      border-radius: 20px;
+      animation: pulse 3s infinite;
+    }
+    .content-section {
+      padding: 50px 20px;
+      background: #121212;
+      text-align: center;
+      animation: fadeInUp 2s ease-in;
+    }
+    .content-section h3 {
+      font-size: 2em;
+      color: #3af;
+      margin-bottom: 20px;
+    }
+    .content-section p {
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    .video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .video-gallery iframe {
+      width: 100%;
+      height: 200px;
+      border: 3px solid #3af;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #3af;
+    }
+    footer {
+      background: #0a0a0a;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #3af;
+      box-shadow: 0 0 10px #3af;
+    }
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px #3af;
+      }
+      50% {
+        box-shadow: 0 0 30px #3af;
+      }
+      100% {
+        box-shadow: 0 0 10px #3af;
+      }
+    }
+    .neon-btn {
+      background: #111;
+      border: 2px solid #3af;
+      color: #3af;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #3af;
+      transition: 0.3s;
+    }
+    .neon-btn:hover {
+      background: #3af;
+      color: #111;
+      box-shadow: 0 0 40px #3af;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apex Gamer TV</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+        <a href="apexsoftwares.html">APEX SOFTWARES</a>
+         <a href="tvshow.html">Watch STAGE TOONS</a>
+         <a href="Submit Your Content Here.html">Submit Your Content</a>
+  </nav>
+  <div class="hero">
+    <h2>Welcome to the Official Apex Gamer TV Website!</h2>
+    <button class="neon-btn" onclick="location.href='#videos'">Explore Videos</button>
+  </div>
+  <div class="content-section" id="about">
+    <h3>About Apex Gamer TV</h3>
+    <p>Apex Gamer TV is a high-energy gaming channel dedicated to intense gameplay, walkthroughs, and game mods across popular titles like GTA, Call of Duty, and more. Dive into thrilling content with cinematic vibes and top-notch editing.</p>
+  </div>
+  <div class="content-section" id="videos">
+    <h3>Featured Videos</h3>
+    <div class="video-gallery">
+      <iframe src="https://youtu.be/NaA9XlCfooQ?si=MR3QhD7D9omhHKSX" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/watch?v=NaA9XlCfooQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/watch?v=Joqokn10kUw&t" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/watch?v=LYy9XyyFHUk" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="content-section" id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: apexgamertv.official@gmail.com<br />
+       YouTube:ApexGamerTV</p>
+       
+       <iframe src="https://discord.com/widget?id=1347657420368904324&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+  
+  <footer>
+    &copy; 2025 Apex Gamer TV. All Rights Reserved.
+  </footer>
+</body>
+</html>

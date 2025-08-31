@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Upload Episode</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #ff0000;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      background-color: #2c2c2c;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #ff0000;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #bbb;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎥 Admin Panel - Add New Episode</h1>
+  <form action="#" method="GET">
+    <label for="title">Episode Title</label>
+    <input type="text" id="title" name="title" placeholder="Enter the episode title" required>
+
+    <label for="url">YouTube Embed URL</label>
+    <input type="text" id="url" name="url" placeholder="https://www.youtube.com/embed/..." required>
+
+    <label for="date">Upload Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <button type="submit" onclick="generateCode(event)">Generate Video Code</button>
+  </form>
+
+  <p class="note">Paste the generated code manually into the main page's <code>videos</code> array inside the JavaScript.</p>
+
+  <script>
+    function generateCode(event) {
+      event.preventDefault();
+      const title = document.getElementById('title').value.trim();
+      const url = document.getElementById('url').value.trim();
+      const date = document.getElementById('date').value;
+
+      if (!title || !url || !date) return;
+
+      const code = `{
+  title: "${title}",
+  url: "${url}",
+  date: "${date}"
+},`;
+
+      const w = window.open('', '', 'width=600,height=400');
+      w.document.write('<pre>' + code + '</pre>');
+    }
+  </script>
+</body>
+</html>
